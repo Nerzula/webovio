@@ -1,0 +1,592 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+@import url('https://fonts.googleapis.com/css2?family=Poppins: 400,400italic,500,600,700&display=swap&subset=cyrillic-ext');
+//<Подключаем шрифты>=======================================================================================
+//&display=swap&subset=cyrillic-ext
+@import "fonts";
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+//@import "icons";
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "Poppins";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1109;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+body {
+	color: #000;
+	font-size: 16px;
+	&._lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&._loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms";
+@import "ui";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "datepicker";
+//@import "lightgallery";
+//@import "pagging";
+@import "popup";
+@import "header";
+@import "footer";
+@import "home";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+.triangle {
+
+}
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.page {
+	flex: 1 1 auto;
+}
+//===================================================================================================================================
+.main {
+	min-height: 100vh;
+	display: flex;
+	padding-top: 84px;
+	align-items: center;
+
+	// .main__content
+
+	&__content {
+		flex: 1 1 auto;
+		position: relative;
+		z-index: 2;
+	}
+
+	// .main__body
+
+	&__body {
+	}
+
+	// .main__text
+
+	&__text {
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 400;
+		margin-bottom: 22px;
+	}
+
+	// .main__motto
+
+	&__motto {
+		max-width: 500px;
+		color: #ffffff;
+		font-size: 60px;
+		font-weight: 700;
+		line-height: 74px;
+		margin-bottom: 35px;
+	}
+
+	// .main__submotto
+
+	&__submotto {
+		max-width: 500px;
+		color: #ffffff;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 26px;
+		margin-bottom: 45px;
+	}
+
+	// .main__link
+
+	&__link {
+		display: block;
+		color: #ffd723;
+		font-size: 16px;
+		font-weight: 700;
+		text-decoration: underline;
+		position: relative;
+		&:hover{
+			color: #fff;
+			.main__triangle {
+				display: none;
+			}
+		}
+	}
+	&__triangle {
+		position: absolute;
+		left: -15px;
+		top: 4px;
+		display: block;
+		width: 0;
+		height: 0;
+		border-top: 5px solid transparent;
+		border-right: 10px solid #ffd723;;
+		border-bottom: 5px solid transparent;
+	}
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.company {
+	max-width: 1276px;
+	min-height: 227px;
+	box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.15);
+	border-radius: 2px;
+	margin: -104px 0 0 auto;
+	// .company__swiper
+
+	&__swiper {
+		background-color: #fff;
+	}
+
+	// .company__wrapper
+
+	&__wrapper {
+		padding-top: 60px;
+	}
+
+	// .company__slide
+
+	&__slide {
+	}
+
+	// .company__img
+
+	&__img {
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+.servise {
+	// .servise__wrapper
+	&__wrapper {
+		display: flex;
+	}
+	&__content {
+		padding-bottom: 148px;
+		position: relative;
+		&:before{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			content:'';
+			background-color: rgba(33, 56, 66, 0.1);
+			height: 1px;
+			width: 100%;
+		}
+	}
+	// .servise__column
+
+	&__column {
+		flex: 0 0 50%;
+	}
+
+	&__info {
+		padding-top: 120px;
+	}
+	// .servise__title
+
+	&__subtitle {
+		color: #5e644f;
+		font-size: 14px;
+		font-weight: 400;
+		margin-bottom: 29px;
+	}
+
+	&__title {
+		max-width: 475px;
+		color: #4d533c;
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 46px;
+		margin-bottom: 35px;
+	}
+
+	// .servise__text
+
+	&__text {
+		max-width: 475px;
+		color: #79878d;
+		line-height: 26px;
+		font-weight: 400;
+		margin-bottom: 42px;
+	}
+
+	// .servise__link
+
+	&__link {
+		color: #d4d6d4;
+		font-size: 16px;
+		font-weight: 700;
+		text-decoration: underline;
+	}
+
+	// .servise__triangle
+
+	&__triangle {
+	}
+
+	// .servise__descr
+	&__card {
+		width: 474px;
+		box-shadow: 0 100px 100px rgba(0, 0, 0, 0.15);
+		background-color: #ffffff;
+		padding: 119px 0px 60px 40px;
+	}
+	&__descr {
+		max-width: 426px;
+		color: #4d533c;
+		font-size: 24px;
+		line-height: 40px;
+		margin-bottom: 50px;
+	}
+
+	// .servise__worker
+
+	&__worker {
+		display: flex;
+	}
+
+	// .servise__avatar
+
+	&__avatar {
+		width: 90px;
+		height: 90px;
+		border-radius: 50%;
+		overflow: hidden;
+		img {
+			display: block;
+			max-width: 100%;
+		}
+	}
+
+	// .servise__about
+
+	&__about {
+		padding-top: 14px;
+		padding-left: 40px;
+	}
+
+	// .servise__name
+
+	&__name {
+		color: #4d533c;
+		font-size: 22px;
+		font-weight: 700;
+		margin-bottom: 6px;
+	}
+
+	// .servise__job
+
+	&__job {
+		color: #152934;
+	}
+}
+
+.project {
+
+	// .project__content
+
+	&__content {
+		padding: 149px 0px 110px 0px;
+	}
+
+	// .project__wrapper
+
+	&__wrapper {
+		display: flex;
+	}
+
+	// .project__column
+
+	&__column {
+		flex: 0 0 auto;
+		&_l {
+			flex: 0 0 33.333%;
+		}
+	}
+
+	// .project__title
+
+	&__title {
+		color: #4d533c;
+		font-family: Poppins;
+		font-size: 36px;
+		font-weight: 700;
+	}
+
+	// .project__text
+
+	&__text {
+		max-width: 450px;
+		color: rgba(33, 56, 66, 0.6);
+		font-weight: 400;
+		line-height: 26px;
+		text-align-last: left;
+		padding-right: 50px;
+		padding: 0px 50px 0px 30px;
+	}
+}
+
+.products {
+
+	// .products__product
+
+	&__product {
+		margin-bottom: 165px;
+		&:nth-child(2) {
+			margin-bottom: 135px;
+		}
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+			padding-bottom: 190px;
+		}
+	}
+}
+.product {
+	display: flex;
+	// .product__column
+
+	&__column {
+		flex: 0 0 50%;
+		display: flex;
+		flex-direction: column;
+		&_r {
+			order: 2;
+		}
+		&_l {
+			order: 1;
+		}
+
+	}
+
+	// .product__bg
+	&__body {
+		position: relative;
+		flex: 0 0 100%;
+	}
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	// .product__card
+
+	&__card {
+		position: absolute;
+		right: -40px;
+		bottom: -65px;
+		z-index: 2;
+		&_l {
+			left:  -40px;
+		}
+	}
+
+	// .product__content
+
+	&__content {
+		padding: 80px 0px 72px 96px;
+	}
+
+	// .product__title
+
+	&__title {
+		max-width: 320px;
+		color: #4d533c;
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 48px;
+		margin-bottom: 24px;
+	}
+
+	// .product__text
+
+	&__text {
+		max-width: 410px;
+		color: rgba(33, 56, 66, 0.6);
+		line-height: 26px;
+		margin-bottom: 30px;
+	}
+
+	// .product__subtext
+
+	&__subtext {
+		max-width: 410px;
+		color: rgba(33, 56, 66, 0.6);
+		line-height: 26px;
+		margin-bottom: 96px;
+	}
+
+	// .product__link
+
+	&__link {
+		color: #d4d6d4;
+		font-weight: 700;
+		text-decoration: underline;
+	}
+}
+.card {
+	padding: 30px 33px 29px 30px;
+	max-width: 453px;
+	box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+	background-color: #ffffff;
+	// .card__text
+
+	&__text {
+		max-width: 390px;
+		color: #4d533c;
+		line-height: 26px;
+		text-align: left;
+		padding-right: 13px;
+		margin-bottom: 24px;
+	}
+
+	// .card__worker
+
+	&__worker {
+		display: flex;
+	}
+
+	// .card__avatar
+
+	&__avatar {
+		width: 46px;
+		height: 46px;
+		border-radius: 50%;
+		overflow: hidden;
+		img {
+			display: block;
+			max-width: 100%;
+		}
+	}
+
+	// .card__about
+
+	&__about {
+		padding-top: 2px;
+		padding-left: 14px;
+	}
+
+	// .card__name
+
+	&__name {
+		color: #4d533c;
+		font-weight: 700;
+		margin-bottom: 4px;
+	}
+
+	// .card__job
+
+	&__job {
+		color: #152934;
+		font-size: 14px;
+	}
+}
+
+.deation {
+	padding-top: 149px;
+	// .deation__title
+
+	&__title {
+		max-width: 588px;
+		color: #4d533c;
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 46px;
+		text-align: left;
+		margin-bottom: 68px;
+	}
+
+	// .deation__wrapper
+
+	&__wrapper {
+		display: flex;
+	}
+
+	// .deation__column
+
+	&__column {
+		flex: 0 0 25%;
+	}
+
+	// .deation__card
+
+	&__card {
+	}
+}
+.card-deation {
+
+	// .card-deation__title
+
+	&__title {
+	}
+
+	// .card-deation__text
+
+	&__text {
+	}
+
+	// .card-deation__link
+
+	&__link {
+	}
+}
+
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
