@@ -3,14 +3,14 @@
 //</МИКСИНЫ>===============================================================================================
 
 //<ШРИФТЫ>===============================================================================================
-@import url('https://fonts.googleapis.com/css2?family=Poppins: 400,400italic,500,600,700&display=swap&subset=cyrillic-ext');
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap&subset=cyrillic-ext);
 //<Подключаем шрифты>=======================================================================================
 //&display=swap&subset=cyrillic-ext
 @import "fonts";
 //</Подключаем шрифты>=======================================================================================
 
 //<Иконочные шрифты>==========================================================================================
-//@import "icons";
+@import "icons";
 //</Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
@@ -96,6 +96,7 @@ body {
 	display: flex;
 	padding-top: 84px;
 	align-items: center;
+	margin-top: -100px;
 
 	// .main__content
 
@@ -182,7 +183,7 @@ body {
 	min-height: 227px;
 	box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.15);
 	border-radius: 2px;
-	margin: -104px 0 0 auto;
+	margin: -20px 0 0 auto;
 	// .company__swiper
 
 	&__swiper {
@@ -271,12 +272,12 @@ body {
 		font-size: 16px;
 		font-weight: 700;
 		text-decoration: underline;
+		&:hover{
+			color: #ffd723;
+		}
 	}
 
 	// .servise__triangle
-
-	&__triangle {
-	}
 
 	// .servise__descr
 	&__card {
@@ -475,9 +476,13 @@ body {
 	// .product__link
 
 	&__link {
+		display: block;
 		color: #d4d6d4;
 		font-weight: 700;
 		text-decoration: underline;
+		&:hover{
+			color: #ffd723;
+		}
 	}
 }
 .card {
@@ -540,7 +545,7 @@ body {
 }
 
 .deation {
-	padding-top: 149px;
+	padding: 150px 0px;
 	// .deation__title
 
 	&__title {
@@ -557,6 +562,7 @@ body {
 
 	&__wrapper {
 		display: flex;
+		justify-content: space-between;
 	}
 
 	// .deation__column
@@ -568,25 +574,106 @@ body {
 	// .deation__card
 
 	&__card {
+		border-radius: 4px;
+		transition: all 0.4s ease 0s;
+		&:hover{
+			background-color: #ffffff;
+			box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.15);
+		}
 	}
 }
 .card-deation {
+	max-width: 255px;
+	height: 100%;
+	padding: 27px 30px 36px 30px;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
 
-	// .card-deation__title
 
 	&__title {
+		width: 183px;
+		color: #4d533c;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 34px;
+		text-transform: uppercase;
+		margin-bottom: 28px;
 	}
 
 	// .card-deation__text
 
 	&__text {
+		max-width: 194px;
+		color: rgba(33, 56, 66, 0.6);
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 26px;
+		margin-bottom: 60px;
+		flex: 1 1 auto;
 	}
 
 	// .card-deation__link
 
 	&__link {
+		display: block;
+		font-weight: 700;
+		color: rgba(33, 56, 66, 0.6);
+		font-style: normal;
+		letter-spacing: normal;
+		line-height: normal;
+		text-decoration: underline;
+		position: relative;
+		&:hover{
+			color: #ffd723;
+		}
+		&:before {
+			content: "\e900";
+			position: absolute;
+			left: -10px;
+			top: 5px;
+		}
 	}
 }
 
+.call {
+	position: relative;
+	z-index: 2;
+	&__content {
+		max-width: 1275px;
+		box-shadow: 50px 130px 100px rgba(0, 0, 0, 0.15);
+		background-color: #fafafa;
+		padding: 70px 0px 70px 164px;
+		text-align: left;
+	}
+	// .call__title
+
+	&__title {
+		max-width: 670px;
+		color: #4d533c;
+		font-size: 60px;
+		font-weight: 700;
+		line-height: 74px;
+		margin-bottom: 49px;
+	}
+
+	// .call__link
+
+	&__link {
+		color: #d4d6d4;
+		font-weight: 700;
+		text-transform: uppercase;
+		position: relative;
+		&:hover{
+			color: #ffd723;
+		}
+		&:before {
+			content: "\e900";
+			position: absolute;
+			left: -10px;
+			top: 4px;
+		}
+	}
+}
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
