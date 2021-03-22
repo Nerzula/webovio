@@ -19,6 +19,14 @@ $toggle: ($size + $margin*2) * 1.5;
 		
 	}
 
+	&__logo {
+		img {
+			max-width: 100%;
+		}
+		@media (max-width:$md2+px){
+			width: 200px;
+		}
+	}
 	&__menu {
 		background: white;
 		border-radius: $size/6;
@@ -32,9 +40,14 @@ $toggle: ($size + $margin*2) * 1.5;
 			display: block;
 			height: 40px;
 			width: 650px;
+<<<<<<< HEAD
 			padding: 13px 0px 0px 20px;
 			@media (max-width:$md2+px){
 				width: 480px;
+=======
+			@media (max-width:$md2+px){
+				width: 500px;
+>>>>>>> 823e62a6df09f216fe2d7422d17e547d04cc40f6
 			}
 		}
 	}

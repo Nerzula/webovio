@@ -138,9 +138,14 @@ body {
 		font-weight: 700;
 		line-height: 74px;
 		margin-bottom: 35px;
+<<<<<<< HEAD
 		@media (max-width:$md1+px){
 			font-size: 50px;
 			margin-bottom: 20px;
+=======
+		@media (max-width:$md2+px){
+			font-size: 50px;
+>>>>>>> 823e62a6df09f216fe2d7422d17e547d04cc40f6
 		}
 	}
 
@@ -170,7 +175,11 @@ body {
 		@media (min-width:$md3+px){
 			&:hover{
 				color: #fff;
+<<<<<<< HEAD
 			}
+=======
+			} 
+>>>>>>> 823e62a6df09f216fe2d7422d17e547d04cc40f6
 		}
 	}
 	&__triangle {
@@ -289,8 +298,10 @@ body {
 		font-size: 16px;
 		font-weight: 700;
 		text-decoration: underline;
-		&:hover{
-			color: #ffd723;
+		@media (min-width:$md3+px){
+			&:hover{
+				color: #ffd723;
+			}
 		}
 	}
 
@@ -500,8 +511,10 @@ body {
 		color: #d4d6d4;
 		font-weight: 700;
 		text-decoration: underline;
-		&:hover{
-			color: #ffd723;
+		@media (min-width:$md3+px){
+			&:hover{
+				color: #ffd723;
+			}
 		}
 	}
 }
@@ -647,8 +660,10 @@ body {
 		line-height: normal;
 		text-decoration: underline;
 		position: relative;
-		&:hover{
-			color: #ffd723;
+		@media (min-width:$md3+px){
+			&:hover{
+				color: #ffd723;
+			} 
 		}
 		&:before {
 			content: "\e900";
@@ -690,8 +705,10 @@ body {
 		font-weight: 700;
 		text-transform: uppercase;
 		position: relative;
-		&:hover{
-			color: #ffd723;
+		@media (min-width:$md3+px){
+			&:hover{
+				color: #ffd723;
+			} 
 		}
 		&:before {
 			content: "\e900";

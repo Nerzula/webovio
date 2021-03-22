@@ -818,6 +818,10 @@ body.ie ._ibg img {
     align-items: center;
 }
 
+.header__logo img {
+    max-width: 100%;
+}
+
 .header__menu {
     background: white;
     border-radius: 6px;
@@ -1330,10 +1334,6 @@ body.ie ._ibg img {
     text-decoration: underline;
 }
 
-.servise__link:hover {
-    color: #ffd723;
-}
-
 .servise__card {
     width: 474px;
     box-shadow: 0 100px 100px rgba(0, 0, 0, 0.15);
@@ -1504,10 +1504,6 @@ body.ie ._ibg img {
     text-decoration: underline;
 }
 
-.product__link:hover {
-    color: #ffd723;
-}
-
 .card {
     padding: 30px 33px 29px 30px;
     max-width: 453px;
@@ -1630,10 +1626,6 @@ body.ie ._ibg img {
     position: relative;
 }
 
-.card-deation__link:hover {
-    color: #ffd723;
-}
-
 .card-deation__link:before {
     content: "\e900";
     position: absolute;
@@ -1670,10 +1662,6 @@ body.ie ._ibg img {
     position: relative;
 }
 
-.call__link:hover {
-    color: #ffd723;
-}
-
 .call__link:before {
     content: "\e900";
     position: absolute;
@@ -1685,6 +1673,25 @@ body.ie ._ibg img {
     .main__link:hover {
         color: #fff;
     }
+<<<<<<< HEAD
+=======
+
+    .servise__link:hover {
+        color: #ffd723;
+    }
+
+    .product__link:hover {
+        color: #ffd723;
+    }
+
+    .card-deation__link:hover {
+        color: #ffd723;
+    }
+
+    .call__link:hover {
+        color: #ffd723;
+    }
+>>>>>>> 823e62a6df09f216fe2d7422d17e547d04cc40f6
 }
 
 @media (min-width: 991.98px) {
@@ -1752,8 +1759,17 @@ body.ie ._ibg img {
         font-size: 18px;
     }
 
+<<<<<<< HEAD
     .header__menu.expanded {
         width: 480px;
+=======
+    .header__logo {
+        width: 200px;
+    }
+
+    .header__menu.expanded {
+        width: 500px;
+>>>>>>> 823e62a6df09f216fe2d7422d17e547d04cc40f6
     }
 
     .header__item {
@@ -1763,6 +1779,13 @@ body.ie ._ibg img {
     .header__link {
         font-size: 12.85714px;
     }
+<<<<<<< HEAD
+=======
+
+    .main__motto {
+        font-size: 50px;
+    }
+>>>>>>> 823e62a6df09f216fe2d7422d17e547d04cc40f6
 }
 
 @media (max-width: 767.98px) {
