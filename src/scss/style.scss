@@ -97,6 +97,8 @@ body {
 	padding-top: 84px;
 	align-items: center;
 	margin-top: -100px;
+	
+	
 
 	// .main__content
 
@@ -109,6 +111,10 @@ body {
 	// .main__body
 
 	&__body {
+		padding-top: 104px;
+		@media (max-width:$md1+px){
+			padding-top: 54px;
+		}
 	}
 
 	// .main__text
@@ -118,17 +124,24 @@ body {
 		font-size: 14px;
 		font-weight: 400;
 		margin-bottom: 22px;
+		@media (max-width:$md1+px){
+			margin-bottom: 12px;
+		}
 	}
 
 	// .main__motto
 
 	&__motto {
-		max-width: 500px;
+		max-width: 616px;
 		color: #ffffff;
 		font-size: 60px;
 		font-weight: 700;
 		line-height: 74px;
 		margin-bottom: 35px;
+		@media (max-width:$md1+px){
+			font-size: 50px;
+			margin-bottom: 20px;
+		}
 	}
 
 	// .main__submotto
@@ -140,6 +153,9 @@ body {
 		font-weight: 400;
 		line-height: 26px;
 		margin-bottom: 45px;
+		@media (max-width:$md1+px){
+			margin-bottom: 35px;
+		}
 	}
 
 	// .main__link
@@ -151,10 +167,9 @@ body {
 		font-weight: 700;
 		text-decoration: underline;
 		position: relative;
-		&:hover{
-			color: #fff;
-			.main__triangle {
-				display: none;
+		@media (min-width:$md3+px){
+			&:hover{
+				color: #fff;
 			}
 		}
 	}
@@ -238,7 +253,9 @@ body {
 		padding-top: 120px;
 	}
 	// .servise__title
-
+	&__marker {
+		background-color: rgba(255, 215, 35, 0.1);
+	}
 	&__subtitle {
 		color: #5e644f;
 		font-size: 14px;
@@ -247,7 +264,7 @@ body {
 	}
 
 	&__title {
-		max-width: 475px;
+		max-width: 400px;
 		color: #4d533c;
 		font-size: 36px;
 		font-weight: 700;
@@ -393,6 +410,9 @@ body {
 		&:last-child {
 			margin: 0px 0px 0px 0px;
 			padding-bottom: 190px;
+			@media (max-width:$md1+px){
+				padding-bottom: 100px;
+			}
 		}
 	}
 }
@@ -416,7 +436,7 @@ body {
 	// .product__bg
 	&__body {
 		position: relative;
-		flex: 0 0 100%;
+		flex: 1 1 100%;
 	}
 	&__bg {
 		position: absolute;
@@ -557,6 +577,9 @@ body {
 		text-align: left;
 		margin-bottom: 68px;
 	}
+	@media (max-width:$md1+px){
+		padding: 100px 0 50px 0px;
+	}
 
 	// .deation__wrapper
 
@@ -645,6 +668,9 @@ body {
 		background-color: #fafafa;
 		padding: 70px 0px 70px 164px;
 		text-align: left;
+		@media (max-width:$md1+px){
+			padding: 50px 0px 50px 100px;
+		}
 	}
 	// .call__title
 

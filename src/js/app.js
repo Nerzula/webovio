@@ -14,15 +14,13 @@
 
 // click('.header__toggle', '.header__menu', 'expanded')
 
-let togName =  document.querySelector('.header__toggle');
+let togName =  document.querySelector('.header__burger');
 
 togName.addEventListener('click', function() {
     let menu = document.querySelector('.header__menu');
-    let burger = document.querySelector('.header__burger');
     let li = document.querySelectorAll('.header__item')
     menu.classList.toggle('expanded');
-    burger.classList.toggle('close');
-    togName.classList.toggle('close');
+    togName.classList.toggle('active');
     li.forEach((i)=> i.classList.toggle('hidden'))
 })
 

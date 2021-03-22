@@ -12,7 +12,6 @@
     &__top {
         padding: 0px 0px 52px 0px;
         display: flex;
-        border-bottom: 1px solid #000;
     }
 
     // .footer__num
@@ -48,7 +47,9 @@
     // .footer__bottom
 
     &__bottom {
-        padding-top: 60px;
+        padding: 60px 0px;
+        border-top: 1px solid #565d41;
+        border-bottom: 1px solid #565d41;
     }
 
     // .footer__wrapper
@@ -70,6 +71,7 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        padding-right: 110px;
     }
 
     // .footer__card
@@ -116,7 +118,7 @@
     &__info {
         padding-left: 110px;
         text-align-last: left;
-        border-left: 1px solid #000;
+        border-left: 1px solid #565d41;
     }
 
     // .footer__text
@@ -131,10 +133,12 @@
     // .footer__email
 
     &__email {
+        display: block;
         color: #ffffff;
         font-size: 24px;
         font-weight: 700;
         line-height: 38px;
+        margin-bottom: 30px;
     }
 
     // .footer__cocial
@@ -174,7 +178,10 @@
     // .cocial-footer__item
 
     &__item {
-        margin-right: 5px;
+        margin-right: 15px;
+        &:last-child {
+            margin: 0px 0px 0px 0px;
+        }
     }
 
     &__link {
