@@ -129,6 +129,9 @@ body {
 		font-weight: 700;
 		line-height: 74px;
 		margin-bottom: 35px;
+		@media (max-width:$md2+px){
+			font-size: 50px;
+		}
 	}
 
 	// .main__submotto
@@ -151,11 +154,10 @@ body {
 		font-weight: 700;
 		text-decoration: underline;
 		position: relative;
-		&:hover{
-			color: #fff;
-			.main__triangle {
-				display: none;
-			}
+		@media (min-width:$md3+px){
+			&:hover{
+				color: #fff;
+			} 
 		}
 	}
 	&__triangle {
@@ -272,8 +274,10 @@ body {
 		font-size: 16px;
 		font-weight: 700;
 		text-decoration: underline;
-		&:hover{
-			color: #ffd723;
+		@media (min-width:$md3+px){
+			&:hover{
+				color: #ffd723;
+			}
 		}
 	}
 
@@ -480,8 +484,10 @@ body {
 		color: #d4d6d4;
 		font-weight: 700;
 		text-decoration: underline;
-		&:hover{
-			color: #ffd723;
+		@media (min-width:$md3+px){
+			&:hover{
+				color: #ffd723;
+			}
 		}
 	}
 }
@@ -624,8 +630,10 @@ body {
 		line-height: normal;
 		text-decoration: underline;
 		position: relative;
-		&:hover{
-			color: #ffd723;
+		@media (min-width:$md3+px){
+			&:hover{
+				color: #ffd723;
+			} 
 		}
 		&:before {
 			content: "\e900";
@@ -664,8 +672,10 @@ body {
 		font-weight: 700;
 		text-transform: uppercase;
 		position: relative;
-		&:hover{
-			color: #ffd723;
+		@media (min-width:$md3+px){
+			&:hover{
+				color: #ffd723;
+			} 
 		}
 		&:before {
 			content: "\e900";

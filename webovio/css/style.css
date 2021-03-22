@@ -818,6 +818,10 @@ body.ie ._ibg img {
     align-items: center;
 }
 
+.header__logo img {
+    max-width: 100%;
+}
+
 .header__menu {
     background: white;
     height: 40px;
@@ -1216,14 +1220,6 @@ body.ie ._ibg img {
     position: relative;
 }
 
-.main__link:hover {
-    color: #fff;
-}
-
-.main__link:hover .main__triangle {
-    display: none;
-}
-
 .main__triangle {
     position: absolute;
     left: -15px;
@@ -1320,10 +1316,6 @@ body.ie ._ibg img {
     font-size: 16px;
     font-weight: 700;
     text-decoration: underline;
-}
-
-.servise__link:hover {
-    color: #ffd723;
 }
 
 .servise__card {
@@ -1496,10 +1488,6 @@ body.ie ._ibg img {
     text-decoration: underline;
 }
 
-.product__link:hover {
-    color: #ffd723;
-}
-
 .card {
     padding: 30px 33px 29px 30px;
     max-width: 453px;
@@ -1622,10 +1610,6 @@ body.ie ._ibg img {
     position: relative;
 }
 
-.card-deation__link:hover {
-    color: #ffd723;
-}
-
 .card-deation__link:before {
     content: "\e900";
     position: absolute;
@@ -1662,15 +1646,33 @@ body.ie ._ibg img {
     position: relative;
 }
 
-.call__link:hover {
-    color: #ffd723;
-}
-
 .call__link:before {
     content: "\e900";
     position: absolute;
     left: -10px;
     top: 4px;
+}
+
+@media (min-width: 767.98px) {
+    .main__link:hover {
+        color: #fff;
+    }
+
+    .servise__link:hover {
+        color: #ffd723;
+    }
+
+    .product__link:hover {
+        color: #ffd723;
+    }
+
+    .card-deation__link:hover {
+        color: #ffd723;
+    }
+
+    .call__link:hover {
+        color: #ffd723;
+    }
 }
 
 @media (min-width: 991.98px) {
@@ -1707,6 +1709,26 @@ body.ie ._ibg img {
 
     .select__options {
         font-size: 18px;
+    }
+
+    .header__logo {
+        width: 200px;
+    }
+
+    .header__menu.expanded {
+        width: 500px;
+    }
+
+    .header__item {
+        margin: 0px 10px 0px 0px;
+    }
+
+    .header__link {
+        font-size: 12.85714px;
+    }
+
+    .main__motto {
+        font-size: 50px;
     }
 }
 
