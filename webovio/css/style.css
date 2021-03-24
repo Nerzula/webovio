@@ -808,7 +808,7 @@ body.ie ._ibg img {
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 6;
 }
 
 .header__content {
@@ -816,6 +816,12 @@ body.ie ._ibg img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header__logo {
+    display: block;
+    position: relative;
+    z-index: 5;
 }
 
 .header__logo img {
@@ -836,7 +842,7 @@ body.ie ._ibg img {
 .header__menu.expanded {
     display: block;
     height: 40px;
-    width: 650px;
+    width: 610px;
     padding: 13px 0px 0px 20px;
 }
 
@@ -929,6 +935,7 @@ body.ie ._ibg img {
     overflow: hidden;
     cursor: pointer;
     position: relative;
+    z-index: 5;
     margin-top: 38px;
 }
 
@@ -1196,6 +1203,8 @@ body.ie ._ibg img {
 
 .main__body {
     padding-top: 104px;
+    position: relative;
+    z-index: 3;
 }
 
 .main__text {
@@ -1229,19 +1238,6 @@ body.ie ._ibg img {
     font-size: 16px;
     font-weight: 700;
     text-decoration: underline;
-    position: relative;
-}
-
-.main__triangle {
-    position: absolute;
-    left: -15px;
-    top: 4px;
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-right: 10px solid #ffd723;
-    border-bottom: 5px solid transparent;
 }
 
 .main__bg {
@@ -1269,6 +1265,7 @@ body.ie ._ibg img {
 }
 
 .company__img img {
+    display: block;
     max-width: 100%;
 }
 
@@ -1673,8 +1670,6 @@ body.ie ._ibg img {
     .main__link:hover {
         color: #fff;
     }
-<<<<<<< HEAD
-=======
 
     .servise__link:hover {
         color: #ffd723;
@@ -1691,7 +1686,6 @@ body.ie ._ibg img {
     .call__link:hover {
         color: #ffd723;
     }
->>>>>>> 823e62a6df09f216fe2d7422d17e547d04cc40f6
 }
 
 @media (min-width: 991.98px) {
@@ -1716,6 +1710,19 @@ body.ie ._ibg img {
         max-width: 970px;
     }
 
+    .header__menu.expanded {
+        padding: 13px 0px 0px 10px;
+        width: 500px;
+    }
+
+    .header__link {
+        font-size: 12.85714px;
+    }
+
+    .main {
+        margin: 0px 0px 0px 0px;
+    }
+
     .main__body {
         padding-top: 54px;
     }
@@ -1724,13 +1731,12 @@ body.ie ._ibg img {
         margin-bottom: 12px;
     }
 
-    .main__motto {
-        font-size: 50px;
-        margin-bottom: 20px;
-    }
-
     .main__submotto {
         margin-bottom: 35px;
+    }
+
+    .company {
+        margin: 0px 0px 0px 0px;
     }
 
     .products__product:last-child {
@@ -1759,38 +1765,125 @@ body.ie ._ibg img {
         font-size: 18px;
     }
 
-<<<<<<< HEAD
-    .header__menu.expanded {
-        width: 480px;
-=======
     .header__logo {
-        width: 200px;
+        width: 150px;
     }
-
-    .header__menu.expanded {
-        width: 500px;
->>>>>>> 823e62a6df09f216fe2d7422d17e547d04cc40f6
-    }
-
-    .header__item {
-        margin: 0px 10px 0px 0px;
-    }
-
-    .header__link {
-        font-size: 12.85714px;
-    }
-<<<<<<< HEAD
-=======
 
     .main__motto {
         font-size: 50px;
+        margin-bottom: 20px;
     }
->>>>>>> 823e62a6df09f216fe2d7422d17e547d04cc40f6
+
+    .servise__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .servise__content {
+        padding-bottom: 80px;
+    }
+
+    .servise__column {
+        flex: 0 0 100%;
+    }
+
+    .servise__info {
+        padding-top: 80px;
+        padding-left: 40px;
+        padding-bottom: 50px;
+    }
+
+    .servise__card {
+        width: 700px;
+        margin: 0px auto;
+    }
 }
 
 @media (max-width: 767.98px) {
     ._container {
         max-width: none;
         padding: 0 10px;
+    }
+
+    .header__logo {
+        width: 100%;
+    }
+
+    .header__menu.expanded {
+        top: 0;
+        height: 100%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        padding: 0px 0px 0px 0px;
+        z-index: 5;
+        border-radius: 0;
+        overflow: auto;
+    }
+
+    .header__list {
+        padding-top: 50px;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100vh;
+    }
+
+    .header__item {
+        margin: 0px 0px 20px 0px;
+        padding-left: 20px;
+    }
+
+    .header__link {
+        font-size: 36px;
+    }
+
+    .main__motto {
+        line-height: 64px;
+    }
+
+    .servise__card {
+        width: 500px;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .header__logo {
+        width: 160px;
+    }
+
+    .header__list {
+        padding-top: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__item {
+        padding: 0px 5px 0px 0px;
+    }
+
+    .header__link {
+        font-size: 30px;
+    }
+
+    .main__body {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .main__motto {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .company {
+        min-height: 127px;
+    }
+
+    .company__wrapper {
+        padding-top: 40px;
     }
 }
